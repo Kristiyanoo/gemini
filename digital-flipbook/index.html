@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Digital Flipbook</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Pustaka PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <!-- Pustaka PageFlip untuk Animasi Buku -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/pdf.page-flip.browser.js"></script>
+    <!-- Pustaka Hammer.js untuk Gestur Pinch Zoom -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+</head>
+<body>
+
+    <!-- Kontrol Toolbar Atas -->
+    <div class="toolbar">
+        <button id="prev-btn">‹ Prev</button>
+        <span id="page-info">Memuat...</span>
+        <button id="next-btn">Next ›</button>
+        <button id="zoom-in-btn">🔍+</button>
+        <button id="zoom-out-btn">🔍-</button>
+        <button id="fullscreen-btn">⛶ Fullscreen</button>
+    </div>
+
+    <!-- Area Utama Flipbook dengan Pinch Zoom Wrapper -->
+    <div id="zoom-container">
+        <div id="flipbook-container">
+            <div id="book"></div>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Memproses PDF, silakan tunggu...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
